@@ -151,7 +151,7 @@ Object.getOwnPropertyDescriptor(obj, 'propertyName');
 
 - To set the attributes for a property:
 
-##### :pushpin: Example | * Setting Attributes of a Property*
+##### :pushpin: Example | *Setting Attributes of a Property*
 
 ``` JavaScript
 Object.defineProperty(obj, 'propertyName', {
@@ -163,7 +163,7 @@ Object.defineProperty(obj, 'propertyName', {
 
 - Constructors have a ["prototype" property](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor). It returns the object that will be used as the prototype for objects created by the constructor.
 
-##### :pushpin: Example | * Constructor Prototype*
+##### :pushpin: Example | *Constructor Prototype*
 
 ``` JavaScript
 Object.prototype === Object.getPrototypeOf({})
@@ -173,7 +173,7 @@ Array.prototype === Object.getPrototypeOf([])
 - All objects created with the same constructor will have the same prototype. 
 - A single instance of this prototype will be stored in the memory.
 
-##### :pushpin: Example | * Constructor Prototype*
+##### :pushpin: Example | *Constructor Prototype*
 
 ``` JavaScript
 const x = {};
@@ -185,7 +185,7 @@ Object.getPrototypeOf(x) === Object.getPrototypeOf(y); // returns true
 
 - When dealing with large number of objects, it's better to put their methods on their prototype. This way, a single instance of the methods will be in the memory. 
 
-##### :pushpin: Example | * Putting Methods into Prototypes*
+##### :pushpin: Example | *Putting Methods into Prototypes*
 
 ``` JavaScript
 Circle.prototype.draw = function() {} 
