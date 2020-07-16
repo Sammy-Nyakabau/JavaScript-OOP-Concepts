@@ -126,3 +126,67 @@ Object.defineProperty(this, 'defaultLocation', {
     set: function(value) { defaultLocation = value; }
 });
 ```
+---
+
+### Prototypes
+>Prototypes are the mechanism by which JavaScript objects inherit features from one another. 
+
+- Every object (except the root object) has a [prototype](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes) (parent). 
+- To get the prototype of an object:
+
+##### :pushpin: Example | *Getting Object Prototype*
+
+``` JavaScript
+Object.getPrototypeOf(obj); 
+```
+
+- In Chrome, you can inspect "`__proto__`" property. But you should not use that in the code.
+- To get the attributes of a property:
+
+##### :pushpin: Example | *Getting Attributes of a Property*
+
+``` JavaScript
+Object.getOwnPropertyDescriptor(obj, 'propertyName'); 
+```
+
+- To set the attributes for a property:
+
+##### :pushpin: Example | * Setting Attributes of a Property*
+
+``` JavaScript
+Object.defineProperty(obj, 'propertyName', {
+    configurable: false,    // cannot be deleted
+    writable: false,
+    enumerable: false
+}); 
+```
+
+- Constructors have a ["prototype" property](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor). It returns the object that will be used as the prototype for objects created by the constructor.
+
+##### :pushpin: Example | * Constructor Prototype*
+
+``` JavaScript
+Object.prototype === Object.getPrototypeOf({})
+Array.prototype === Object.getPrototypeOf([]) 
+```
+
+- All objects created with the same constructor will have the same prototype. 
+- A single instance of this prototype will be stored in the memory.
+
+##### :pushpin: Example | * Constructor Prototype*
+
+``` JavaScript
+const x = {};
+const y = {};
+Object.getPrototypeOf(x) === Object.getPrototypeOf(y); // returns true 
+```
+
+- Any changes to the prototype will be immediately visible to all objects referencing this prototype. 
+
+- When dealing with large number of objects, it's better to put their methods on their prototype. This way, a single instance of the methods will be in the memory. 
+
+##### :pushpin: Example | * Putting Methods into Prototypes*
+
+``` JavaScript
+Circle.prototype.draw = function() {} 
+```
