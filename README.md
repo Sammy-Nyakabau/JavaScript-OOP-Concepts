@@ -190,3 +190,47 @@ Object.getPrototypeOf(x) === Object.getPrototypeOf(y); // returns true
 ``` JavaScript
 Circle.prototype.draw = function() {} 
 ```
+
+### Prototypical Inheritance
+>When it comes to inheritance, JavaScript only has one construct: objects. Each object has a private property which holds a link to another object called its prototype. That prototype object has a prototype of its own, and so on until an object is reached with null as its prototype. By definition, null has no prototype, and acts as the final link in this prototype chain.
+
+>Nearly all objects in JavaScript are instances of Object which sits on the top of a prototype chain.
+
+>While this confusion is often considered to be one of JavaScript's weaknesses, the prototypal inheritance model itself is, in fact, more powerful than the classic model. It is, for example, fairly trivial to build a classic model on top of a prototypal model.
+
+##### :pushpin: Example | *Prototypical Inheritance*
+
+``` JavaScript
+function Shape() {}
+function Circle() {}
+
+// Prototypical inheritance 
+Circle.prototype = Object.create(Shape.prototype);
+Circle.prototype.constructor = Circle;
+```
+
+- Calling the constructor of the base (super) object
+
+##### :pushpin: Example | *Prototypical Inheritance*
+
+``` JavaScript
+function Rectangle(color) {
+    // To call the super constructor 
+    Shape.call(this, color); //Rectangle inherits from Shape
+}
+```
+
+- To implement [method overriding](https://en.wikipedia.org/wiki/Method_overriding) in prototypical inheritance, the method in the base object is 1st called and then more logic is added depending on the object
+
+##### :pushpin: Example | *Method Overriding*
+
+``` JavaScript
+Shape.prototype.draw = function() {}
+Circle.prototype.draw = function() {
+    // Call the base implementation 
+    Shape.prototype.draw.call(this);
+
+    // Do additional stuff here 
+}
+```
+
