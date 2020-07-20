@@ -260,3 +260,26 @@ function Person() {}
 
 mixin(Person.prototype, canEat, canWalk);
 ```
+---
+
+### ES6 Classes
+
+>JavaScript classes, introduced in ECMAScript 2015, are primarily syntactical sugar over JavaScript's existing prototype-based inheritance. The class syntax does not introduce a new object-oriented inheritance model to JavaScript.
+
+##### :pushpin: Example | *Implementing ES6 classes*
+
+``` JavaScript
+class Circle {
+    constructor(radius) {
+        this.radius = radius; 
+    }
+
+    // These methods will be added to the prototype. 
+    draw() {
+    }
+
+    // This will be available on the Circle class (Circle.parse())
+    static parse(str) {
+    }
+}
+```
