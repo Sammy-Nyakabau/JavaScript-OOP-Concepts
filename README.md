@@ -6,7 +6,7 @@ Code Snippets which detail the Object Oriented Programming principles in JavaScr
 2. [Objects](https://github.com/Sammy-Nyakabau/JavaScript-OOP-Concepts#objects)
 2. [Prototypes](https://github.com/Sammy-Nyakabau/JavaScript-OOP-Concepts#prototypes)
 3. [Prototypical Inheritance](https://github.com/Sammy-Nyakabau/JavaScript-OOP-Concepts#prototypical-inheritance)
-4. ES6 Classes 
+4. [ES6 Classes](https://github.com/Sammy-Nyakabau/JavaScript-OOP-Concepts#es6-classes) 
 5. Modules
 ---
 ### Introduction
