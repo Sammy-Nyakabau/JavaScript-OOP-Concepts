@@ -234,3 +234,29 @@ Circle.prototype.draw = function() {
 }
 ```
 
+>Don't create large inheritance. One level of inheritance is fine.
+
+#### Mixins
+Use [mixins](https://javascript.info/mixins) to combine multiple objects and implement [composition](https://en.wikipedia.org/wiki/Composition_over_inheritance) in JavaScript. 
+
+##### :pushpin: Example | *Mixins*
+
+``` JavaScript
+const canEat = { 
+    eat: function() {}
+};
+
+const canWalk = {
+    walk: function() {}
+};
+
+function mixin(target, ...sources) {
+    // Copies all the properties from all the source objects 
+    // to the target object. 
+    Object.assign(target, ...sources);
+}
+
+function Person() {}
+
+mixin(Person.prototype, canEat, canWalk);
+```
