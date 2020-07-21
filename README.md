@@ -7,7 +7,7 @@ Code Snippets which detail the Object Oriented Programming principles in JavaScr
 3. [Prototypes](https://github.com/Sammy-Nyakabau/JavaScript-OOP-Concepts#prototypes)
 4. [Prototypical Inheritance](https://github.com/Sammy-Nyakabau/JavaScript-OOP-Concepts#prototypical-inheritance)
 5. [ES6 Classes](https://github.com/Sammy-Nyakabau/JavaScript-OOP-Concepts#es6-classes) 
-6. Modules
+
 ---
 ### Introduction
 
@@ -324,7 +324,7 @@ class Rectangle {
     }
 }
 ```
-- WeakMaps give us better protection than symbols. There is no way to access private members implemented using WeakMaps from the outside of an object. 
+- [WeakMaps](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap) give us better protection than symbols. There is no way to access private members implemented using WeakMaps from the outside of an object. 
 
 #### Inheritance
 
@@ -345,3 +345,4 @@ class Triangle extends Shape {
     }
 }
 ```
+
