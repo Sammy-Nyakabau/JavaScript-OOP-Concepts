@@ -283,3 +283,65 @@ class Circle {
     }
 }
 ```
+
+#### Encapsulation
+>Encapsulation is the packing of data and functions into one component (for example, a class) and then controlling access to that component to make a "blackbox" out of the object. Because of this, a user of that class only needs to know its interface (that is, the data and functions exposed outside the class), not the hidden implementation.
+
+##### :pushpin: Example | *Implementing Encapsulation Method 1*
+
+``` JavaScript
+// Using symbols to implement private properties and methods
+const _size = Symbol();
+const _draw = Symbol();
+
+class Square {
+    constructor(size) {
+        // "Kind of" private property 
+        this[_size] = size; 
+    }
+
+    // "Kind of" private method 
+    [_draw]() {
+    }
+ 
+}
+```
+- By "kind of" I mean: these properties and methods are essentally part of the object and are accessible from the outside. But accessing them is hard and awkward.
+
+##### :pushpin: Example | *Implementing Encapsulation Method 2*
+
+``` JavaScript
+// using WeakMaps to implement private properties and methods
+const _width = new WeakMap();
+
+class Rectangle {
+    constructor(width) {
+        _width.set(this, width);
+    }
+
+    draw() {
+        console.log('Rectangle with width' + _width.get(this));
+    }
+}
+```
+- WeakMaps give us better protection than symbols. There is no way to access private members implemented using WeakMaps from the outside of an object. 
+
+#### Inheritance
+
+##### :pushpin: Example | *Implementing Inheritance*
+
+``` JavaScript
+class Triangle extends Shape {
+    constructor(color) {
+        // To call the base constructor 
+        super(color);
+    }
+
+    draw() {
+        // Call the base method 
+        super.draw();
+
+        // Do some other stuff here
+    }
+}
+```
