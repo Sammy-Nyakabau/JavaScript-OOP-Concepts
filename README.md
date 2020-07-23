@@ -1,7 +1,7 @@
-# JavaScript-OOP-Concepts :page_with_curl:
+# :computer:JavaScript-OOP-Concepts :page_with_curl:
 Code Snippets which detail the Object Oriented Programming principles in JavaScript. The code was adapted from [Mosh Hamedani](https://codewithmosh.com/)
 
-## Table of Contents :bookmark_tabs:
+## Table of Contents :book:
 1. [Introduction](https://github.com/Sammy-Nyakabau/JavaScript-OOP-Concepts#introduction)
 2. [Objects](https://github.com/Sammy-Nyakabau/JavaScript-OOP-Concepts#objects)
 3. [Prototypes](https://github.com/Sammy-Nyakabau/JavaScript-OOP-Concepts#prototypes)
@@ -57,6 +57,7 @@ function Circle(radius) {
 //Creating an object from a constructor function
 const c2 = new Circle(1)
 ```
+##### **[Back To Top :arrow_up:](https://github.com/Sammy-Nyakabau/JavaScript-OOP-Concepts#table-of-contents-bookmark_tabs)**
 
 #### More on Objects
 
@@ -126,6 +127,7 @@ Object.defineProperty(this, 'defaultLocation', {
     set: function(value) { defaultLocation = value; }
 });
 ```
+##### **[Back To Top :arrow_up:](https://github.com/Sammy-Nyakabau/JavaScript-OOP-Concepts#table-of-contents-bookmark_tabs)**
 ---
 
 ### Prototypes
@@ -190,6 +192,7 @@ Object.getPrototypeOf(x) === Object.getPrototypeOf(y); // returns true
 ``` JavaScript
 Circle.prototype.draw = function() {} 
 ```
+##### **[Back To Top :arrow_up:](https://github.com/Sammy-Nyakabau/JavaScript-OOP-Concepts#table-of-contents-bookmark_tabs)**
 
 ### Prototypical Inheritance
 >When it comes to inheritance, JavaScript only has one construct: objects. Each object has a private property which holds a link to another object called its prototype. That prototype object has a prototype of its own, and so on until an object is reached with null as its prototype. By definition, null has no prototype, and acts as the final link in this prototype chain.
@@ -233,6 +236,7 @@ Circle.prototype.draw = function() {
     // Do additional stuff here 
 }
 ```
+##### **[Back To Top :arrow_up:](https://github.com/Sammy-Nyakabau/JavaScript-OOP-Concepts#table-of-contents-bookmark_tabs)**
 
 >Don't create large inheritance. One level of inheritance is fine.
 
@@ -260,6 +264,8 @@ function Person() {}
 
 mixin(Person.prototype, canEat, canWalk);
 ```
+
+##### **[Back To Top :arrow_up:](https://github.com/Sammy-Nyakabau/JavaScript-OOP-Concepts#table-of-contents-bookmark_tabs)**
 ---
 
 ### ES6 Classes
@@ -325,6 +331,7 @@ class Rectangle {
 }
 ```
 - [WeakMaps](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap) give us better protection than symbols. There is no way to access private members implemented using WeakMaps from the outside of an object. 
+##### **[Back To Top :arrow_up:](https://github.com/Sammy-Nyakabau/JavaScript-OOP-Concepts#table-of-contents-bookmark_tabs)**
 
 #### Inheritance
 
@@ -346,3 +353,4 @@ class Triangle extends Shape {
 }
 ```
 
+##### **[Back To Top :arrow_up:](https://github.com/Sammy-Nyakabau/JavaScript-OOP-Concepts#table-of-contents-bookmark_tabs)**
