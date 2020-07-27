@@ -1,5 +1,8 @@
 # :computer:JavaScript-OOP-Concepts :page_with_curl:
+
+![JavaScript](https://i.ibb.co/NTVx1jW/download.jpg)
 Code Snippets which detail the Object Oriented Programming principles in JavaScript.
+
 
 ## Table of Contents :book:
 1. [Introduction](https://github.com/Sammy-Nyakabau/JavaScript-OOP-Concepts#introduction)
