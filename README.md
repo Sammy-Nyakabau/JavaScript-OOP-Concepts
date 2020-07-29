@@ -1,6 +1,6 @@
-# :computer:JavaScript-OOP-Concepts :page_with_curl:
-
 ![JavaScript](https://i.ibb.co/NTVx1jW/download.jpg)
+
+# :computer:JavaScript-OOP-Concepts :page_with_curl:
 Code Snippets which detail the Object Oriented Programming principles in JavaScript.
 
 
