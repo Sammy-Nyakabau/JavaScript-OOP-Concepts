@@ -51,6 +51,23 @@ circle.draw = () => {
 
 }
 ```
+- One can also create a object using properties of another object using the 
+[object.create()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create) method.
+
+##### :pushpin: Example | _object.create()_
+
+```JavaScript
+const circle = {
+   radius: 1, //default values
+   draw: function() {}
+};
+
+const circle1 = object.create(circle)
+circle1.radius = 2
+circle1.draw = () => {
+
+}
+```
 
 - To create multiple objects with the same structure and behavior (methods), use a factory function or a [constructor function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/Function).
 
